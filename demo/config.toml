@@ -1,0 +1,18 @@
+[[job]]
+name = "base"
+bazel_jvm = { target = "//foo/base" }
+
+[[job]]
+name = "app"
+bazel_jvm = { target = "//foo/app" }
+dependencies = [ "base" ]
+
+[[job]]
+name = "seed"
+bazel_jvm = { target = "//foo/seed" }
+dependencies = [ "base" ]
+
+[[job]]
+name = "frontend"
+yarn = { workspace = "app", script = "dev" }
+

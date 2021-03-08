@@ -1,0 +1,17 @@
+[package]
+name = "cat-herd"
+version = "0.1.0"
+authors = ["John P Mayer Jr <john.p.mayer.jr@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "cat-herd"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.7"
+serde = "*"
+serde_derive = "*"
+termion = "1.5"
+toml = "*"
+tui = "0.14"
